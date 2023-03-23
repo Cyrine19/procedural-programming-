@@ -1,0 +1,39 @@
+function dot_product ;
+var
+v1,v2:array of integer
+i, n: integer;
+ps: integer;
+begin
+write('Entrez le nombre de paires de vecteurs : ');
+readln(Length(v1));
+readln(Length(v2));
+
+ 
+  ps := 0; 
+  for i := 1 to n do
+  begin
+    write('Entrez les valeurs du premier vecteur de la paire ', i, ' : ');
+    readln(v1[i]);
+
+    write('Entrez les valeurs du premier vecteur de la paire ', i, ' : ');
+    readln(v2[i]);
+  
+  // Calcul du produit scalaire
+  for i := 0 to n-1 do
+  begin
+    ps := ps + v1[i] * v2[i];
+  end;
+  
+  dot_product := ps; 
+  if ps = 0 then 
+    begin
+      writeln('Les vecteurs de la paire ', i, ' sont orthogonaux');
+    end;
+    else
+    begin
+      writeln('Les vecteurs de la paire ', i, ' ne sont pas orthogonaux');
+    end;
+    
+  
+end.
+
